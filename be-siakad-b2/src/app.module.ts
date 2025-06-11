@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MahasiswaModule } from './mahasiswa/mahasiswa.module';
 import { Mahasiswa } from './mahasiswa/entities/mahasiswa.entity';
+import { MatkulModule } from './matkul/matkul.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { Mahasiswa } from './mahasiswa/entities/mahasiswa.entity';
       synchronize: true,
     }),
     MahasiswaModule,
+    MatkulModule,      // ini uts
   ],
 })
 export class AppModule {}
